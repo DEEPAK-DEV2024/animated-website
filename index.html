@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anti </title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="loco.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  </head>
+  <body>
+    <div id="mini-circle"></div>
+    <main>
+     <section id="home">
+      <nav>
+        <a href="#">Anti</a>
+        <h3 id="menuBtn" onclick="dropdownAnimation()">Menu +</h3>
+        <div id="dropdownMenu">
+          <a href="#">Home</a>
+          <a href="#">Animation</a>
+          <a href="#">Youtube</a>
+          <a href="#">About Me</a>
+          <a href="#">Contact</a>
+        </div>
+      </nav>
+      
+        <div id="home-content">
+          <div class="animation-box">
+            <h1 class="animation-element">I'M WEB</h1>
+          </div>
+          <div class="animation-box">
+            <h1 class="animation-element">DESIGNER</h1>
+          </div>
+          
+        </div>
+        <div id="sub-content">
+          <div class="animation-box">
+            <h5 class="animation-element">AVAILABLE FOR FREELANCE</h5>
+          </div>
+          <div class="animation-box">
+            <h5 class="animation-element">WORK FROM NOV 23'</h5>
+          </div>
+        </div>
+        <div id="home-footer">
+          <a href="#"
+            >CURRENTLY WORKING AT ... <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M16.0037 9.41421L7.39712 18.0208L5.98291 16.6066L14.5895 8H7.00373V6H18.0037V17H16.0037V9.41421Z"></path></svg></a>
+          <a href="#">Resume <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M16.0037 9.41421L7.39712 18.0208L5.98291 16.6066L14.5895 8H7.00373V6H18.0037V17H16.0037V9.41421Z"></path></svg></a>
+          <div class="iconset">
+            <a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="rgba(0,0,0,1)"><path d="M13.0001 16.1716L18.3641 10.8076L19.7783 12.2218L12.0001 20L4.22192 12.2218L5.63614 10.8076L11.0001 16.1716V4H13.0001V16.1716Z"></path></svg></a>
+            <a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="rgba(0,0,0,1)"><path d="M13.0001 16.1716L18.3641 10.8076L19.7783 12.2218L12.0001 20L4.22192 12.2218L5.63614 10.8076L11.0001 16.1716V4H13.0001V16.1716Z"></path></svg></a>
+          </div>
+        </div>
+      </section>
+      <section id="second">
+        <div class="element">
+          <img src="img/plug.png" alt="" />
+          <h1>The PLug</h1>
+          <h5>2022</h5>
+        </div>
+        <div class="element">
+          <img src="img/mobile2.png" alt="" />
+          <h1>Experience</h1>
+          <h5>2022</h5>
+        </div>
+        <div class="element last-element">
+          <img src="img/mobile.png" alt="" />
+          <h1>Do IT</h1>
+          <h5>2022</h5>
+        </div>
+      </section>
+      <section id="about">
+        <img src="img/cynthia.png" alt="" />
+        <div id="about-text">
+          <h5>(About Me)</h5>
+          <p>
+            I'm a product designer with a passion for creating products that not
+            only look good but also solve real problems. When I'm not sketching
+            ideas on paper, you can find me binge-watching a Netflix series or
+            playing video games. My design philosophy is simple: make it
+            visually appealing, functional, and bring a smile to people's faces.
+            I'm the designer you want on your team if you want to make people
+            say 'I need that in my life!'.
+          </p>
+          <a href="#">Let's Talk</a>
+        </div>
+      </section>
+
+      <section id="subscribe">
+        <h5>(Forgot to mention)</h5>
+        <h3>
+          subscribe to my youtube channel <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="rgba(255,255,255,1)"><path d="M16.0037 9.41421L7.39712 18.0208L5.98291 16.6066L14.5895 8H7.00373V6H18.0037V17H16.0037V9.41421Z"></path></svg>
+        </h3>
+      </section>
+      <footer>
+        <div id="footer-left">
+          <h3>2023 &copy;</h3>
+          <h4 id="time"></h4>
+        </div>
+        <div id="footer-right">
+          <a href="">Dribble</a>
+          <a href="">Intagram</a>
+          <a href="">linkdin</a>
+          <a href="">twitter</a>
+        </div>
+      </footer>
+    </main>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+      integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
+    <script src="script.js"></script>
+    <!-- <script>
+      $(document).ready(function () {
+        $('menuBtn').click(function () {
+          
+        })
+      })
+    </script> -->
+  </body>
+</html>

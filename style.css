@@ -1,0 +1,367 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+#mini-circle {
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  z-index: 1000;
+  border-radius: 50%;
+  background-color: #fff;
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+}
+.animation-box {
+  width: fit-content;
+  overflow: hidden;
+}
+.animation-box .animation-element {
+  transform: translateY(100%);
+}
+main {
+  width: 100%;
+  background-color: black;
+}
+#home {
+  height: 100vh;
+  background-color: black;
+  position: relative;
+}
+#home nav {
+  padding: 20px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  position: relative;
+}
+#home nav a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 20px;
+}
+#menuBtn{
+  cursor: pointer;
+  z-index: 999;
+  position: relative;
+}
+#dropdownMenu {
+  position: absolute;
+  right: 30px;
+  width: 450px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#dropdownMenu a {
+  position: relative;
+  top: -20px;
+  opacity: 0;
+}
+.dropdownAnimtion {
+  animation: dropdown 0.25s ease-out 1 forwards;
+}
+#dropdownMenu a:nth-child(1) {
+  animation-delay: 0.25s;
+}
+#dropdownMenu a:nth-child(2) {
+  animation-delay: 0.35s;
+}
+#dropdownMenu a:nth-child(3) {
+  animation-delay: 0.45s;
+}
+#dropdownMenu a:nth-child(4) {
+  animation-delay: 0.55s;
+}
+#dropdownMenu a:nth-child(5) {
+  animation-delay: 0.65s;
+}
+
+@keyframes dropdown {
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+.dropdownAnimtionContent {
+  animation: dropContent 0.5s ease-out 1 forwards;
+}
+
+@keyframes dropContent {
+  to{
+    top: 10px;
+    opacity: 0;
+  }
+}
+
+#home-content {
+  margin-top: 6vw;
+  padding: 0 35px;
+  line-height: 1;
+}
+#home-content h1 {
+  font-size: 10vw;
+  color: rgba(255, 255, 255, 0.7);
+}
+#home-content h1:last-child {
+  margin-left: 10vw;
+}
+#sub-content {
+  margin-top: 80px;
+  padding-right: 30px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+#home-footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+  position: absolute;
+  bottom: 10px;
+}
+.iconset {
+  display: flex;
+  gap: 5px;
+}
+.iconset a {
+  height: 30px;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  opacity: 0.7;
+  border-radius: 50%;
+}
+.iconset > a > svg {
+  height: 20px;
+  transition: transform 0.3s ease;
+}
+.iconset > a:hover svg {
+  animation: up-down-arrow 0.45s ease-out 1;
+}
+@keyframes up-down-arrow {
+  25% {
+    transform: translateY(30px);
+  }
+  50% {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+  75% {
+    transform: translateY(-30px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+#home-footer > a {
+  text-decoration: none;
+  color: #fff;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#home-footer > a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+#home-footer > a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+#home-footer > a svg {
+  height: 20px;
+  transition: all 0.25s ease-out;
+}
+#home-footer > a:hover svg {
+  rotate: 45deg;
+}
+
+#second {
+  padding-top: 10px;
+  height: 100vh;
+  width: 100%;
+  background-color: black;
+  color: white;
+}
+
+.element {
+  width: 85%;
+  border-top: 2px solid #888;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding: 3.5vw 3vw;
+  padding-right: 0;
+  color: white;
+  opacity: 0.7;
+}
+.element h1 {
+  font-size: 7.5vw;
+}
+.element img {
+  opacity: 0;
+  z-index: 99999;
+  height: 140%;
+  position: absolute;
+}
+.last-element {
+  border-bottom: 2px solid #888;
+}
+#about {
+  height: 100vh;
+  width: 100%;
+  background-color: black;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+#about img {
+  height: 250px;
+}
+#about-text {
+  background-color: black;
+  padding-left: 3.7vw;
+  width: 400px;
+  font-size: 1.1rem;
+}
+#about-text h5 {
+  color: white;
+  opacity: 0.7;
+  margin-bottom: 10px;
+}
+#about-text p {
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+#about-text a {
+  padding: 10px 25px;
+  border: 1px solid #fff;
+  border-radius: 100px;
+  color: #fff;
+  font-size: 14px;
+  text-decoration: none;
+  transition: all 1s;
+}
+#about-text a:hover {
+  background-color: white;
+  color: black;
+}
+#subscribe {
+  background-color: black;
+  color: white;
+  padding: 20px 40px;
+  padding-bottom: 6vw;
+}
+#subscribe h5 {
+  text-transform: uppercase;
+  opacity: 0.6;
+}
+
+#subscribe h3 {
+  text-transform: uppercase;
+  font-size: 14px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  position: relative;
+  width: fit-content;
+}
+
+#subscribe > h3 svg {
+  height: 20px;
+  transition: all 0.25s ease-out;
+}
+#subscribe > h3:hover svg {
+  rotate: 45deg;
+}
+
+#subscribe > h3::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+#subscribe > h3:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+footer {
+  background-color: black;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 30px 30px;
+}
+#footer-left {
+  display: flex;
+  gap: 40px;
+}
+#footer-left h4 {
+  margin-top: 1.5px;
+}
+#footer-right {
+  display: flex;
+  gap: 30px;
+}
+#footer-right > a {
+  position: relative;
+}
+#footer-right > a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+#footer-right > a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+footer a {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+}
