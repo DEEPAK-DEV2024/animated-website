@@ -54,6 +54,7 @@ main {
 #dropdownMenu {
   position: absolute;
   right: 30px;
+  bottom: 0;
   width: 450px;
   display: flex;
   justify-content: space-between;
@@ -61,8 +62,24 @@ main {
 }
 #dropdownMenu a {
   position: relative;
-  top: -20px;
   opacity: 0;
+  top: 20px;
+}
+#dropdownMenu > a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+#dropdownMenu > a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
 .dropdownAnimtion {
   animation: dropdown 0.25s ease-out 1 forwards;
@@ -368,10 +385,21 @@ footer a {
 
 
 @media (max-width:768px) {
-  #dropdownMenu{
+  #dropdownMenu a {
+    opacity: 0;
+  }
+  #dropdownMenu {
+    position: absolute;
+    right: 0;
+    width: 130px;
+    top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     flex-direction: column;
   }
   #footer-right{
+
     flex-wrap: wrap;
   }
 }
