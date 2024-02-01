@@ -105,8 +105,19 @@ function dropdownAnimation() {
 
 function updateTime() {
   const date = new Date();
-  let hour = date.getUTCHours()+5;
-  let min = date.getUTCMinutes()+30;
+  let hour = date.getUTCHours() + 5;
+  let min = date.getUTCMinutes() + 30;
+
+  // Adjust hours and minutes if they go beyond 24 and 60, respectively
+  if (hour >= 24) {
+    hour = hour - 24;
+  }
+
+  if (min >= 60) {
+    min = min - 60;
+    hour++; // Increment the hour if minutes go beyond 60
+  }
+
   const ampm = hour >= 12 ? "PM" : "AM";
   hour = (hour % 12) || 12; // Convert 0 to 12
   hour = hour < 10 ? "0" + hour : hour;
@@ -115,6 +126,9 @@ function updateTime() {
   const currentTime = `${hour}:${min} ${ampm}`;
   document.getElementById('time').innerHTML = currentTime;
 }
+
+setInterval(updateTime, 1000);
+
 
 
 setInterval(updateTime, 1000);
